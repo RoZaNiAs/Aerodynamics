@@ -1,19 +1,52 @@
-# Aerodynamics
-Python codes used for analysis and simulation of a steady flow around profiles and wings
+# ✈️ Aerodynamics
 
-The structure of this repository is given in two folders, one for the nummerical programs for profiles and another one for the wings.
-Both have their instructions in order to be used:
+This repository contains Python code for the analysis and simulation of steady flow around airfoils and wings. The code is structured into two main folders:
 
-PROFILES CODES
+- Profiles Codes
 
-For a complete profile analysis, it is necessary to create a folder named "Airfoil_data" if you want to compare the numerical data calculated with the experimental/obtained data.
-The files in this folder must follow the naming convention:
-NACA_ProfileNumber_AngleOfAttack_ST/T (with or without trim tab).txt
-After this, you must update the file name and profile variables in the code so the plots make the correct comparison.
+- Wings Codes
 
-WINGS CODES
+Each folder includes specific instructions for setup and usage.
 
-Between lines 244 and 278, there are functions that export the calculated data to an Excel file. This is designed so that large matrices are visually clearer.
-To use this code correctly, it is necessary to create two folders in the same directory as the code file: one called "Tablas" and another called "XFLR5_Data".
-Tables are automatically saved with appropriate names. The XFLR5 data must be extracted from the program and assigned the name:
-Wing_Grap_cd/cl/cm.txt — one file for each coefficient.
+📄 Profiles Codes
+These scripts simulate flow around airfoils and optionally compare numerical results with external data.
+
+Setup Instructions:
+
+Create a folder named Airfoil_data in the root directory.
+
+To enable comparison with external data, add text files using the following naming convention:
+NACA_<ProfileNumber>_<AngleOfAttack>_ST.txt or ..._T.txt
+
+ST = no trim tab
+
+T = with trim tab
+
+Usage:
+
+Update the file name and airfoil variables in the script to ensure accurate plotting and comparisons.
+
+🧮 Wings Codes
+These scripts analyze finite wings, exporting results and allowing for comparison with XFLR5 data.
+
+Setup Instructions:
+
+Create two folders in the same directory as the code:
+
+Tablas: used to store the automatically generated Excel tables.
+
+XFLR5_Data: place the exported data from XFLR5 here.
+
+Data Format:
+
+XFLR5 files must be named as follows (one file per coefficient):
+
+Wing_Grap_cd.txt
+
+Wing_Grap_cl.txt
+
+Wing_Grap_cm.txt
+
+Notes:
+
+Data export functions are located between lines 244–278 in the script. These are designed for better readability of large matrices in Excel format.
