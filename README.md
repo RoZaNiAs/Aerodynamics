@@ -15,9 +15,11 @@ These scripts simulate flow around airfoils and optionally compare numerical res
 
 1. Create a folder named Airfoil_data in the root directory.
 2. Place data files using the following naming convention:
-    - NACA_<ProfileNumber><AngleOfAttack>ST.txt
-    - NACA<ProfileNumber><AngleOfAttack>_T.txt
+    - NACA_<ProfileNumber>_<AngleOfAttack>_ST.txt
+    - NACA_<ProfileNumber>_<AngleOfAttack>_T.txt
+      
    Where
+   
     - ST = no trim tab
 
     - T = with trim tab
