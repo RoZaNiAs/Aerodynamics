@@ -11,7 +11,7 @@ Each folder includes specific instructions for setup and usage.
 ## 📄 Profiles Codes
 These scripts simulate flow around airfoils and optionally compare numerical results with external data.
 
-## Setup Instructions:
+### Setup Instructions:
 
 1. Create a folder named Airfoil_data in the root directory.
 2. Place data files using the following naming convention:
@@ -32,7 +32,7 @@ These scripts simulate flow around airfoils and optionally compare numerical res
 ## 🧮 Wings Codes
 Scripts for lifting-line theory and other 3D wing calculations, with optional export to Excel and comparison with XFLR5 outputs.
 
-## Setup Instructions:
+### Setup Instructions:
 
 1. Create two folders in the root directory:
    - `Tablas` — for storing generated Excel tables
