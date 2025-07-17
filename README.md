@@ -8,45 +8,42 @@ This repository contains Python code for the analysis and simulation of steady f
 
 Each folder includes specific instructions for setup and usage.
 
-📄 Profiles Codes
+## 📄 Profiles Codes
 These scripts simulate flow around airfoils and optionally compare numerical results with external data.
 
-Setup Instructions:
+## Setup Instructions:
 
-Create a folder named Airfoil_data in the root directory.
+1. Create a folder named Airfoil_data in the root directory.
+2. Place data files using the following naming convention:
+    NACA_<ProfileNumber><AngleOfAttack>ST.txt
+    NACA<ProfileNumber><AngleOfAttack>_T.txt
 
-To enable comparison with external data, add text files using the following naming convention:
-NACA_<ProfileNumber>_<AngleOfAttack>_ST.txt or ..._T.txt
+    - ST = no trim tab
 
-ST = no trim tab
+    - T = with trim tab
 
-T = with trim tab
+### ▶️ Usage
 
-Usage:
+- Open the script and modify the `filename` and `profile` variables to match the airfoil and angle of attack you're analyzing.
+- Run the script to generate plots and, if applicable, compare with external data in `Airfoil_data`.
 
-Update the file name and airfoil variables in the script to ensure accurate plotting and comparisons.
+---
 
-🧮 Wings Codes
-These scripts analyze finite wings, exporting results and allowing for comparison with XFLR5 data.
+## 🧮 Wings Codes
+Scripts for lifting-line theory and other 3D wing calculations, with optional export to Excel and comparison with XFLR5 outputs.
 
-Setup Instructions:
+## Setup Instructions:
 
-Create two folders in the same directory as the code:
+1. Create two folders in the root directory:
+   - `Tablas` — for storing generated Excel tables
+   - `XFLR5_Data` — for importing coefficient data exported from XFLR5
 
-Tablas: used to store the automatically generated Excel tables.
+2. Place the XFLR5 output files in `XFLR5_Data` using these names:
+   Wing_Grap_cd.txt
+   Wing_Grap_cl.txt
+   Wing_Grap_cm.txt
 
-XFLR5_Data: place the exported data from XFLR5 here.
+### 📤 Data Export
 
-Data Format:
-
-XFLR5 files must be named as follows (one file per coefficient):
-
-Wing_Grap_cd.txt
-
-Wing_Grap_cl.txt
-
-Wing_Grap_cm.txt
-
-Notes:
-
-Data export functions are located between lines 244–278 in the script. These are designed for better readability of large matrices in Excel format.
+- The script automatically saves results in Excel format (in `Tablas`) for better visualization of large matrices.
+- Export-related functions are located between **lines 244 and 278** in the code.
